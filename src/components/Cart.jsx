@@ -15,7 +15,7 @@ const Cart = ({ addToCart }) => {
       {products.map(product => (
         <div key={product.id} className="flex flex-col md:flex-row mb-4 p-4 border rounded shadow-lg">
           <div className="md:w-1/4 w-full">
-            <img src={product.image} alt={product.title} className="w-full h-auto" />
+            <img src={product.image} alt={product.title} className="w-full h-60" />
             <p className="text-lg font-bold mt-2">${product.price}</p>
             <button 
               onClick={() => addToCart(product)} 
