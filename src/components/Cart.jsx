@@ -1,4 +1,4 @@
-import {useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Cart = ({ addToCart }) => {
@@ -13,8 +13,8 @@ const Cart = ({ addToCart }) => {
   return (
     <div className="p-4 h-[635px] overflow-y-auto hide-scrollbar hover:overflow-y-scroll">
       {products.map(product => (
-        <div key={product.id} className="flex mb-4 p-4 border rounded shadow-lg">
-          <div className="w-1/4">
+        <div key={product.id} className="flex flex-col md:flex-row mb-4 p-4 border rounded shadow-lg">
+          <div className="md:w-1/4 w-full">
             <img src={product.image} alt={product.title} className="w-full h-auto" />
             <p className="text-lg font-bold mt-2">${product.price}</p>
             <button 
@@ -23,7 +23,7 @@ const Cart = ({ addToCart }) => {
               Add to Cart
             </button>
           </div>
-          <div className="w-3/4 pl-4">
+          <div className="md:w-3/4 w-full md:pl-4 mt-4 md:mt-0">
             <h2 className="text-xl font-bold">{product.title}</h2>
             <p>{product.description}</p>
           </div>
